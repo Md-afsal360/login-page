@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./css/style.css">
+    <title>Document</title>
+    <script>
+       
+
+        function handelclick(){
+            let email=document.getElementById('email').value;
+        let password=document.getElementById('password').value;
+            if((email === 'afsal@gmail.com') && (password === '1234')){
+                        localStorage.setItem('email',email);
+                        window.location.href='home.html';
+            }else{
+                document.getElementById('show').innerHTML='Login-failed';
+                document.getElementById('show').style.backgroundColor='red';
+                document.getElementById('show').style.width='90%';
+                document.getElementById('show').style.padding='15px';
+                document.getElementById('show').style.margin='10px';
+                document.getElementById('show').style.textAlign='center';
+                document.getElementById('show').style.color='black';
+                document.getElementById('show').style.fontSize='larger';
+                
+            }
+        }
+    </script>
+</head>
+<body>
+
+    <div id="show">
+
+    </div>
+ <div class="form">
+    <!-- <div class="container"> -->
+            <h1>login</h1>
+            <label for="email">username</label>
+            <input id="email" type="email" name="email" placeholder="enter email">
+            <label for="password">password</label>
+            <input id="password" type="password" name="password" placeholder="enter password">
+            <div class="button1">
+            <button  onclick="handelclick()" type="submit">Login</button>
+            </div>
+    <!-- </div> -->
+</div>
+</body>
+</html>
+
+
+
+<!-- <div class="container1">
+    <div class="container">
+        <div class="box"></div>
+        
+        <div class="title">
+            <h6>hello</h6>
+            <h1>webdevlop</h1>
+            <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Id eaque similique neque inventore iste, cumque eius aspernatur culpa corrupti. Quod consequatur quae eveniet atque praesentium recusandae doloremque tempora exercitationem provident? ipsum dolor sit amet consectetur adipisicing elit. Quo nobis nihil aut corrupti asperiores sunt deleniti repellat eum, voluptatibus eveniet.</p>
+             <button>read more</button>
+       </div>
+    </div>
+</div> -->

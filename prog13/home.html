@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./css/home.css" type="text/css"/>
+    <script src="https://kit.fontawesome.com/125fbc4c52.js" crossorigin="anonymous"></script>
+    <script>
+        function handclick(){
+        if((document.getElementById('side').style.left ==='-300px')){
+            document.getElementById('side').style.left='0px';
+        }else{
+            document.getElementById('side').style.left='-300px';
+        }
+    }
+    function logout(){
+            localStorage.removeItem('email');
+            window.location.href = "index.html";
+        }
+    </script>
+</head>
+<body>
+    <div class="nav">
+        <div class="button1">
+        <button onclick="handclick()"><i class="fa-solid fa-bars"></i></button>
+        </div>
+        <div class="heading">
+            <h1>WELCOME TO THE HOME-PAGE</h1>
+        </div> 
+    </div>
+    <div class="sidebar" id="side">
+        <ul>
+            <li><i class="fa-solid fa-house"></i><a href="#" target="_blank">-Home</a></li>
+            <li><i class="fa-solid fa-gauge"></i><a href="#" target="_blank">-about</a></li>
+            <li><i class="fa-brands fa-servicestack"></i><a href="#" target="_blank">-Service</a></li>
+            <li><i class="fa-solid fa-id-badge"></i><a href="#" target="_blank">-Contact</a></li>
+            <li><i class="fa-solid fa-link"></i><a href="/index.html" target="_blank">-Login</a></li>
+            <li onclick="logout()"><i class="fa-solid fa-right-from-bracket"></i><a href="#" target="_blank">-Log-out</a></li>
+        </ul>
+    </div>
+</body>
+</html>
