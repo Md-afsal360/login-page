@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="./css/style.css">
+    <link rel="stylesheet" href="./style.css" type="text/css">
     <title>Document</title>
     <script>
        
@@ -14,7 +14,7 @@
         let password=document.getElementById('password').value;
             if((email === 'afsal@gmail.com') && (password === '1234')){
                         localStorage.setItem('email',email);
-                        window.location.href='home.html';
+                        window.location.href='./dashboard.html';
             }else{
                 document.getElementById('show').innerHTML='Login-failed';
                 document.getElementById('show').style.backgroundColor='red';
@@ -29,7 +29,7 @@
         }
     </script>
 </head>
-<body>
+<body background="./background_log.jpg">
 
     <div id="show">
 

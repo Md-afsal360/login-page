@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./dashboard.css" type="text/css"/>
+    <script src="https://kit.fontawesome.com/125fbc4c52.js" crossorigin="anonymous"></script>
+    <script>
+        function handclick(){
+        if((document.getElementById('side').style.left ==='-400px')){
+            document.getElementById('side').style.left='0px';
+        }else{
+            document.getElementById('side').style.left='-400px';
+        }
+    }
+    function logout(){
+            localStorage.removeItem('email');
+            window.location.href = "index.html";
+        }
+    function loadpage(page){
+        switch(page){
+            case 'home':
+                document.getElementById('main').innerHTML="<object type=text/html width='100%' height='100%' data=home.html></object>"
+                document.getElementById('heading').innerHTML="<h1>HOME</h1>";
+            break;
+            case 'about':
+            document.getElementById('main').innerHTML="<object type=text/html width='100%' height='100%' data=about.html></object>"
+            document.getElementById('heading').innerHTML="<h1>ABOUT</h1>";
+            break;
+            case 'contact':
+            document.getElementById('main').innerHTML="<object type=text/html width='100%' height='100%' data=contact.html></object>"
+            document.getElementById('heading').innerHTML="<h1>CONTACT</h1>";
+            break;
+            case 'service':
+            
+            document.getElementById('main').innerHTML="<object type=text/html width='100%' height='100%' data=services.html></object>"
+            document.getElementById('heading').innerHTML="<h1>SERVICE</h1>";
+            break;
+            default:
+                console.log("page not found");
+              break;
+        }
+    }
+    </script>
+</head>
+<body>
+    <div class="nav" >
+        <div class="button1">
+        <button onclick="handclick()"><i class="fa-solid fa-bars"></i></button>
+        </div>
+        <div class="heading" id="heading">
+            <h1> DASHBOARD </h1>
+        </div> 
+    </div>
+    <div class="container">
+    <div class="sidebar" id="side">
+        <ul>
+            <img src="./goku-1.jpg" alt="" width="150px" height="150px" style="border-radius: 40px;margin-left: 10px;border-bottom-left-radius: 100px;border-bottom-right-radius: 100px;">
+            <li onclick="loadpage('home')"><i class="fa-solid fa-house"></i><a>-Home</a></li>
+            <li onclick="loadpage('about')"><i class="fa-solid fa-gauge"></i><a>-about</a></li>
+            <li onclick="loadpage('service')"><i class="fa-brands fa-servicestack"></i><a>-Service</a></li>
+            <li onclick="loadpage('contact')"><i class="fa-solid fa-id-badge"></i><a>-Contact</a></li>
+            <li><i class="fa-solid fa-link"></i><a href="https://aytravels246.netlify.app">-Links</a></li>
+            <li onclick="logout()"><i class="fa-solid fa-right-from-bracket"></i><a>-Log-out</a></li>
+        </ul>
+    </div>
+    <div id="main" style="width: 100%; height: 100vh">
+        <img src="./walle-1.jpg" alt="img" width="100%" height="100%" style="margin: 0%;padding: 0%;">
+    </div>
+    
+    </div>
+    
+    
+</body>
+</html>

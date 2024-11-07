@@ -1,0 +1,21 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    list-style: none;
+    text-decoration: none;
+}
+body{
+    background-size: cover;
+    width: 100%;
+    overflow: hidden;
+}
+h1{
+    position: absolute;
+    left: 30%;
+    top: 200px;
+    backdrop-filter: blur(10px);
+    padding: 10px;
+    border-radius: 10px;
+    border: 1px solid grey;
+}
